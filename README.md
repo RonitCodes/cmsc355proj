@@ -2,7 +2,23 @@
 This is our project for 355 including all three sprints
 
 Sprint 1: 
-We worked on the log-in page along with the create playlist page which would be prototype 1 and prototype 6 from our midterm use case specification. Although we are still working through commit errors in the github, below we have provided screenshots of the pages ran locally on our devices. To develop these pages we employed javascript and css with plans to incorperate a flask or SQL database as our backend. After dealing with local errors of connecting to the git, we finally were able to push the login page as shown below. These prototypes are done and when we get to the landing page in the next split we will work on the routing of these pages to and from the landing page. 
+We worked on the log-in page along with the create playlist page which would be prototype 1 and prototype 6 from our midterm use case specification. Although we are still working through commit errors in the github, below we have provided screenshots of the pages ran locally on our devices. To develop these pages we employed javascript and css with plans to incorperate a flask or SQL database as our backend. After dealing with local errors of connecting to the git, we finally were able to push the login page as shown below. These prototypes are done and when we get to the landing page in the next split we will work on the routing of these pages to and from the landing page. Finally these are the testcases that we have planned for this sprint: 
+Sure, I can help you with creating test cases for React components for a login page and a playlist create page. Here are some test cases you could consider:
+
+Login Page
+
+1. Rendering Test
+2. Input Field Validation
+3. Form Submission
+4. Authentication Flow
+
+Playlist Create Page
+1. Rendering Test
+2. Input Field Validation
+3. Song Selection
+4. Playlist Creation
+
+
 
 ![image](https://github.com/RonitCodes/cmsc355proj/assets/136006251/eaffe8e0-38d1-4eed-ad8d-a0b7112050cd)
 
