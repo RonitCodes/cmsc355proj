@@ -4,6 +4,9 @@ import './App.css';
 import PlaylistCreator from './PlaylistCreator';
 import './PlaylistCreator.css';
 import Login from './login'; // Import the Login component
+import Signup from './Signup';
+import './Signup.css';
+
 
 function App() {
   return (
@@ -11,6 +14,7 @@ function App() {
       <main>
         <PlaylistCreator />
         <Login /> {/* Render the Login component */}
+        <Signup /> {}
       </main>
     </div>
   );
