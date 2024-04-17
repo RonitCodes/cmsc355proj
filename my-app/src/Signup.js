@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+
 
 const Signup = () => {
   //const history = useHistory();
@@ -8,13 +11,19 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  function ButtonLink({ to, children }) {
+    return <Link to={to}>
+      <button>
+  
+      {children}
+      </button></Link>;
+  }
   // password validation
   let hasSixChar = password.length >= 6;
   let hasLowerChar = /(.*[a-z].*)/.test(password);
   let hasUpperChar = /(.*[A-Z].*)/.test(password);
   let hasNumber = /(.*[0-9].*)/.test(password);
   let hasSpecialChar = /(.*[^a-zA-Z0-9].*)/.test(password);
-
 
   return (
     <div className="container">
@@ -41,7 +50,7 @@ const Signup = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        
+
         <input
           type="password"
           placeholder="Confirm Password"
@@ -60,23 +69,9 @@ const Signup = () => {
         )}
       </div>
       <div className="button">
-        <button
-          disabled={
-            !username ||
-            !email ||
-            !password ||
-            !confirmPassword ||
-            password !== confirmPassword ||
-            !hasSixChar ||
-            !hasLowerChar ||
-            !hasUpperChar ||
-            !hasNumber ||
-            !hasSpecialChar
-          }
-        >
-          Submit
-        </button>
-        </div>
+      <ButtonLink to="/">Submit</ButtonLink>
+      <Link to="/">Cancel</Link>
+      </div>
     </div>
   );
 };
