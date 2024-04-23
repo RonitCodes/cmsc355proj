@@ -23,3 +23,7 @@ Playlist Create Page
 
 ![image](https://github.com/RonitCodes/cmsc355proj/assets/136006251/471c1418-6ac9-4f24-8ba8-8903f4a2f64a)
 
+
+Sprint 2:
+Introduced Singup up page and Forgot password page. Also created routing between pages. This included prototypes 3 and 4. The information about the sprint can be found in the below google docs link, 
+https://docs.google.com/document/d/1cQiLotdh715HLFYZPPpN497eyABKAgxFjGVSnySGMew/edit?usp=sharing
