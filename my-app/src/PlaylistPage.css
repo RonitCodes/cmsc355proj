@@ -1,0 +1,36 @@
+/* PlaylistPage.css */
+
+.playlist-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #E0E0E0; 
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .song-list {
+    border: 1px solid #000; 
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff; 
+  }
+  
+  .song {
+    margin-bottom: 5px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #000; 
+    background-color: #fff; 
+    border-radius: 4px;
+  }
+  
