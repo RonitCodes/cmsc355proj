@@ -1,4 +1,12 @@
 const express = require('express')
+const {
+    createUser,
+    getUser,
+    getUsers
+} = require('../controllers/userController')
+
+const User = require('../models/usersModel')
+
 
 const router = express.Router()
 
@@ -13,10 +21,7 @@ router.get('/:id', (req, res) => {
 })
 
 //POST a new user
-router.post('/', (req, res) => {
-    
-    res.json({mssg: 'POST new user'})
-})
+router.post('/', createUser)
 
 //DELETE a user
 router.delete('/:id', (req, res) => {
