@@ -69,7 +69,7 @@ const Signup = () => {
         )}
       </div>
       <div className="button">
-      <ButtonLink to="/">Submit</ButtonLink>
+      <ButtonLink to="/Login">Submit</ButtonLink>
       <Link to="/">Cancel</Link>
       </div>
     </div>
