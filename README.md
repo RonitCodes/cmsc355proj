@@ -27,3 +27,7 @@ Playlist Create Page
 Sprint 2:
 Introduced Singup up page and Forgot password page. Also created routing between pages. This included prototypes 3 and 4. The information about the sprint can be found in the below google docs link, 
 https://docs.google.com/document/d/1cQiLotdh715HLFYZPPpN497eyABKAgxFjGVSnySGMew/edit?usp=sharing
+
+
+Sprint 3: 
+Fully fleshed out front end with a start to backend testing. Implemented full UML diagram. Ensured going to specific pages depending on whether or not you "logged in"
