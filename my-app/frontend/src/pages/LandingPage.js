@@ -12,6 +12,9 @@ const LandingPage = () => {
         <Link to="/Signup" className="button">
           Sign Up
         </Link>
+        <Link to="Login" className="button">
+          Login
+        </Link>
         <Link to="/ForgotPassword" className="button">
           Forgot Password
         </Link>

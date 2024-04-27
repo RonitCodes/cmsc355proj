@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './PlaylistCreator.css';
+import { useNavigate } from 'react-router-dom'
+import Context from '../context'
 
 const PlaylistCreator = () => {
   const [playlistName, setPlaylistName] = useState('');
   const [firstSong, setFirstSong] = useState('');
+  const navigate = useNavigate();
+  const { loggedIn, setLoggedIn } = useContext(Context);
 
   const handleCreatePlaylist = () => {
     // Here, you would typically send the playlist data to a server or perform some other action
@@ -11,12 +15,23 @@ const PlaylistCreator = () => {
     // Reset the input fields after creating the playlist
     setPlaylistName('');
     setFirstSong('');
+    if (loggedIn === false) {
+      navigate('/')
+    } else {
+      navigate('/PlaylistPage')
+    }
+
   };
 
   const handleCancel = () => {
     // Reset the input fields
     setPlaylistName('');
     setFirstSong('');
+    if (loggedIn === false) {
+      navigate('/ç')
+    } else {
+      navigate('/PlaylistPage')
+    }
   };
 
   return (

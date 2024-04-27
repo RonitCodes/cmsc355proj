@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
+import Context from '../context'
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const { loggedIn, setLoggedIn } = useContext(Context);
 
   const handleLogin = (e) => {
+
     e.preventDefault();
-      navigate("/LandingPage");
-    
+      setLoggedIn(true);
+      navigate("/PlaylistPage");
   };
 
   return (
@@ -32,7 +36,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <button type="submit" onClick={handleLogin}>
+      <button onClick={handleLogin}>
         Login
       </button>
       <div className="bottom-links">

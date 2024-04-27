@@ -5,7 +5,17 @@ const {
     getUsers
 } = require('../controllers/userController')
 
-const User = require('../models/usersModel')
+const User = require('../models/user')
+const {verifyToken} = require("../middlewares/auth")
+
+const { 
+    signup, 
+    login, 
+    logout,
+    getLoggedInUser,
+} = require("../controllers/userController");
+const { userRegisterValidator, userById } = require("../middlewares/user")
+
 
 
 const router = express.Router()
@@ -32,5 +42,23 @@ router.delete('/:id', (req, res) => {
 router.patch('/:id', (req, res) => {
     res.json({mssg: 'UPDATA a user'})
 })
+
+
+
+router.post("/signup", async (req, res) => {
+    try {
+        await signup(req, res); // Call the register controller function
+    } catch (error) {
+        console.error("Error occurred during registration:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+//api routes
+ 
+//router.post("/", login)
+//router.get("/logout", logout)
+//router.get("/user", verifyToken, userById, getLoggedInUser);
+ 
 
 module.exports = router

@@ -1,6 +1,7 @@
 require('dotenv').config()
 
 
+const cors = require("cors");
 const express = require('express')
 const userRoutes = require('./routes/users')
 const mongoose = require('mongoose')
@@ -9,7 +10,9 @@ const mongoose = require('mongoose')
 const app = express();
 
 //middleware
+app.use(cors({origin: true, credentials: true}));
 app.use(express.json())
+const expressValidator = require("express-validator");
 
 app.use((req, res, next) => {
     console.log(req.path, req.method)

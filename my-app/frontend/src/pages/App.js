@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './App.css';
 import PlaylistCreator from './PlaylistCreator';
@@ -12,6 +12,9 @@ import ReactDOM from 'react-dom/client';
 import '../index.css'
 import LandingPage from './LandingPage';
 import './LandingPage.css'
+import PlaylistPage from './PlaylistPage'
+import './PlaylistPage.css'
+import Context from '../context'
 
 import {
   BrowserRouter, Routes, Route
@@ -19,17 +22,22 @@ import {
 
 
 
+
+
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
   return (
-        
-          <Routes>
-           
-            <Route exact path="/" element={<Login/>}/>
+        <Context.Provider value={{ loggedIn, setLoggedIn }}>
+          <Routes>      
+            <Route exact path="/" element={<LandingPage/>}/>
             <Route exact path="/Signup" element={<Signup />}/>
             <Route exact path="/ForgotPassword" element={<ForgotPassword />}/>
-            <Route exact path="/LandingPage" element={<LandingPage />}/>
+            <Route exact path="/Login" element={<Login/>}/>
             <Route exact path="/PlaylistCreator" element={<PlaylistCreator />} /> 
+            <Route exact path="/PlaylistPage" element={<PlaylistPage/>} />
           </Routes>
+          </Context.Provider>
   )
 }
 
