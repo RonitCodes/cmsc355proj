@@ -31,3 +31,5 @@ https://docs.google.com/document/d/1cQiLotdh715HLFYZPPpN497eyABKAgxFjGVSnySGMew/
 
 Sprint 3: 
 In Sprint 3, we focused on optimizing our app's functionality to ensure a seamless user experience. One significant enhancement was rerouting every page to ensure smooth navigation throughout the application. We introduced a Context file to track the user's login status, setting a boolean value accordingly when the login button is clicked. This mechanism enables us to direct users effectively after actions like logging in or exiting the create playlist page. During testing, we employed multiple test cases, using fake user emails such as abc@gmail.com, abcd@gmail.com, and abcde@gmail.com, along with playlists of varying lengths. This thorough testing process ensures the robustness and reliability of our application across different scenarios. Implemented full UML diagram. Ensured going to specific pages depending on whether or not you "logged in"
+
+UML Diagram here --> https://docs.google.com/document/d/1aETVE6ioTSZ2a5dvuNB1ITkwUcdPj4VBQDAskMpFeko/edit?usp=sharing
